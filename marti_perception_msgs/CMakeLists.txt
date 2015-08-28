@@ -4,7 +4,7 @@ project(marti_perception_msgs)
 find_package(catkin REQUIRED 
   message_generation
   std_msgs
-  sensor_msgs)
+)
 
 add_message_files(FILES
   PedestrianImageID.msg
@@ -12,11 +12,10 @@ add_message_files(FILES
 
 generate_messages(DEPENDENCIES
   std_msgs
-  sensor_msgs)
+)
 
 catkin_package(
   CATKIN_DEPENDS 
     message_runtime
     std_msgs 
-    sensor_msgs
 )
