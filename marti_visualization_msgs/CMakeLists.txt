@@ -3,8 +3,10 @@ project(marti_visualization_msgs)
 
 find_package(catkin REQUIRED 
   message_generation
+  std_msgs
   geometry_msgs
-  sensor_msgs)
+  sensor_msgs
+)
 
 add_message_files(FILES
   TexturedMarker.msg
@@ -12,12 +14,15 @@ add_message_files(FILES
 )
 
 generate_messages(DEPENDENCIES
+  std_msgs
   geometry_msgs
-  sensor_msgs)
+  sensor_msgs
+)
 
 catkin_package(
   CATKIN_DEPENDS 
     message_runtime
+    std_msgs
     geometry_msgs 
     sensor_msgs
 )
